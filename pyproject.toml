@@ -4,8 +4,13 @@ version = "0.1.0"
 description = "MLOps home assignment: LLM inference + observability"
 requires-python = ">=3.11"
 dependencies = [
-    # Serving
-    "vllm>=0.9.0,<0.11",
+    # Serving (Linux-only; served on the cloud VM. Local dev uses Ollama.)
+    "vllm>=0.9.0,<0.11; sys_platform == 'linux'",
+    # Pin transformers to the 4.55.x line: vLLM 0.10.2 calls
+    # tokenizer.all_special_tokens_extended, which the transformers 4.56+ tokenizer
+    # rewrite removed (breaks Qwen3 startup). Newer transformers also gets pulled in
+    # if left unpinned once vLLM is gated out on Windows.
+    "transformers>=4.55.2,<4.56",
     # Agent (major-version bounded; uv.lock pins exactly)
     "langgraph>=1.0,<2.0",
     "langchain>=1.0,<2.0",

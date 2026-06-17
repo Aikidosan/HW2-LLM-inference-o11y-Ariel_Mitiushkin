@@ -1,0 +1,7519 @@
+{
+  "summary": {
+    "requested_rps": 10.0,
+    "duration_seconds": 150,
+    "wall_clock_seconds": 154.35702111800128,
+    "total_requests": 1500,
+    "achieved_rps": 9.717730940488254,
+    "ok": 1499,
+    "timeouts": 0,
+    "http_errors": 1,
+    "client_errors": 0,
+    "latency_p50": 2.0722914729994955,
+    "latency_p95": 9.05190917100117,
+    "latency_p99": 15.983559030000833,
+    "latency_max": 118.89664742100103
+  },
+  "results": [
+    {
+      "latency_seconds": 0.36053932500180963,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.5234085749998485,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.47345327499897394,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0846121979993768,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9564400929994008,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7362185489982949,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9557463510009256,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0673753520004539,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8443178960005753,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7865506950001873,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7885729730005551,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9720987229993625,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2141630269998132,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.166067396001381,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0307331880012498,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3818692870008817,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2124246139992465,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4445544200007134,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4509731360012665,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7119611309990432,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.86889114800033,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.196963048998441,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9649473059998854,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5790475820012944,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.48121520299901,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9185260009999183,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8571655939995253,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0832728060013324,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7959785340008239,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6732302609998442,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6272688999997627,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.004084588999831,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.369909970999288,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.06240483900001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.343323777000478,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1125726959999156,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5144863839996106,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2118780659984623,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7242182030004187,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.761769839999033,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1264179499994498,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.91072264000104,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5597141289999854,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2022407429994928,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8253456679994997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.041864380998959,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.5187052709989075,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7876189230009913,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3677373440004885,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7038771019997512,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.862162394001643,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8663142899986269,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.534729351000351,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.982869073999609,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8299133260006784,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3187073139997665,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3395612690001144,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0440130820006743,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.526627245999407,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1965296319995105,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3995595430005778,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6396875669997826,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8464565690010204,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3704407900004298,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.593589829000848,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5627442580007482,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9627261710011226,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.714883832000851,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.790391508000539,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7511795640002674,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5373501849990134,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.354133359998741,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.45436615700055,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.008435706000455,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0533751830007532,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6169051130000298,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4738795599987498,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4611340569990716,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.659734077000394,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.204240728999139,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.344109308000043,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3262471269990783,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1681885620000685,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.444920429999911,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8447418810010277,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.830847626000832,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9444064899998921,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.775310435999927,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4731281809999928,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.138763912998911,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.176167321000321,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.977309421999962,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8893915170010587,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7011640630007605,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0025709380006447,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.427869519999149,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3051984510002512,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.701775629999247,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5297107419992244,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.309245631999147,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.974464329001421,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9802272669985541,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5802048179994017,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8530125209999824,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1035253239988378,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7172370179996506,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7050751260012476,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.506272145999901,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9177065270014282,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1181080959995597,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1697347890003584,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7699189110007865,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1668403989988292,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.2792195420006465,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3921904020007787,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1061477520015615,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0359659750010906,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.138157378998585,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8189566940000077,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8161580050000339,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6387425060001988,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9462414530007663,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5467502800001967,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5474051649998728,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.058504130998699,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6897512640007335,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8079033379999601,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.786709301000883,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.298425008999402,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.472056110998892,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.709396142001424,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9306996150007762,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.776702123999712,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.689551866000329,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3921672999986185,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.4176837949999026,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.320080883000628,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6833465409999917,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1981677780004247,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6233233299990388,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7371931310008222,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1742980540002463,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1487599760002922,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.561272615999769,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.5590874850004184,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7302712139990035,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9011877220000315,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.25536129899956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.3951649150003504,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6680106690000684,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5058308739990025,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9740146469994215,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6900518369984638,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.603284803000861,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.329438533000939,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8093382690003637,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.321805666000728,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1393072779992508,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3732983200006856,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7162466930003575,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6328744170004938,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2781073260011908,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.085329659999843,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.35500807400058,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2812206149992562,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.743062331999681,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1562759099997493,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.032357318999857,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4013363830017624,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.202238119998583,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0541887359995599,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.983867525999813,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.982253750999007,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3940395939989685,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6834822579985484,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2720014330006961,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3602837119997275,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8734974809995038,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.4505947719990218,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3268947249998746,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.387065826998878,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7298003689993493,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.059022997998909,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.511891847998413,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.207918931000677,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2287375050000264,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7330664189994422,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.555310419000307,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6560906630002137,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6999907290010015,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0426673220008524,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4173439659989526,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6702784259996406,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7721127789991442,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4969414480001433,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2277050250013417,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7303847260009206,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.074573459000021,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.181981708999956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0827562350004882,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0973933629993553,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.179602176998742,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.207526107000376,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0342538690001675,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9799661100005324,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.180426175000321,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.891677604999131,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.01446999899963,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.7799934650010982,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.841095529000086,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5456215279991738,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4472198739986197,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.347052438000901,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.804573385999902,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1128164040001138,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.868475376999413,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0722914729994955,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.568775256999288,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0040187520007748,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8121281769999769,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5001035559998854,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.809785000999909,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.311351206000836,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.2782195010004216,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.437347363000299,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9645398880002176,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.45916537300036,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8055633189997025,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5254291759993066,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3060043020013836,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0740763459998561,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.712762424000175,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.083892247999756,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.537096288999237,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1955478890013183,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3057523400002538,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.9668186939998122,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3122021079998376,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.245956725000724,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.765198457000224,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.948811358999592,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0493550099999993,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2758676670000568,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8860509709993494,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6005293629987136,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.78022771599899,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.187602528001662,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8504584080001223,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.067777551999825,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.612979384999562,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.505672429000697,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.649390296999627,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6676712720000069,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3426210959987657,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7573216979999415,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5725612679998449,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3792957709993061,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.738458238000021,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.948472530999425,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5725788229992759,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5488077840000187,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.321261070001128,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1797309479989053,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.166879100001097,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.724681440000495,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.031450569998924,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.86703314999977,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3797817489994486,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5899361400006455,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9965415239985305,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3071659110009932,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.628857429999698,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.4107392780006194,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.047128292000707,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.365662529999099,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.563098790000367,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5891492329992616,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.9900849160003418,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8421578939996834,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.573551920000682,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.759851479000645,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0288625979992503,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.429353565999918,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.249228480999591,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.7635335420000047,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8681553970000095,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9641188419991522,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5904381740001554,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7600024800012761,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4772383159997844,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9879445229998964,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.8914023420002195,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9848505279987876,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 14.786105339999267,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1008491230004438,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.659996117999981,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8805922850006027,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.628219070000341,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.097502482998607,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.212353148999682,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.332469177999883,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7626110460005293,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4819290209998144,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8010199580003246,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.5329187260012986,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3838698399995337,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8111296980005136,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4443358759999683,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.356755090000661,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.913464715000373,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.931511217000661,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8530739299985726,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.794971366000027,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.723081853999247,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8916456580009253,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.174176750999322,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9411365500000102,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7722317759998987,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8651586800006044,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0656627589996788,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3658628270004556,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7659057550008583,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.67227227299918,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9955456549996597,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.336491799000214,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.404091170999891,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.159759299000143,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.105177067998738,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1086454310006957,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0211857990016142,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4873478630015597,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.600763968999672,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9261244600002101,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.026149699000598,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.764643389999037,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3657240390002698,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.219083691999913,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.9027678100010235,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.532188526000027,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7934540389996982,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8949789799989958,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.600690537999981,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.701860459999807,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.149567503000071,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6737137119998806,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3668519639995793,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.018743773000097,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.635681924999517,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3485450250009308,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1956792729997687,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.455348532001153,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.518006446000072,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.962881395000295,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0691323630016996,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9785954689996288,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.141812025000036,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.099232986998686,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.346119584000917,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0609206270000868,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8448654000003444,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2791204700006347,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9956014469989896,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.397876044999066,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.224486955999964,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3946479650003312,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2283815119990322,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.244187106000027,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0785924600004364,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.625867613000082,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4969937700006994,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.58930644999964,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.114944519000346,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7754684510000516,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.076283952999802,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8134240110011888,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.2757738340005744,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4753137690004223,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2213546940001834,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.321184987000379,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.7555851570014056,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.65685819600003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.1570601889998215,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.74204711099992,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9345613949990366,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.540312699999049,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4463989100004255,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.481956812000135,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.876628220999919,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6894001410000783,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4406552510008623,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.967364064001231,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9389272759999585,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5496944619990245,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.072906753001007,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.089229190998594,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.299603811999987,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.051780133000648,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.875518013001056,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.730720580999332,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3311188749994471,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0475838929996826,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 17.559068018999824,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.9984863360004965,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7059965370008285,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.870884780999404,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9304135479997058,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.727383869998448,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.44003109500045,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8115894940001454,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8244942159999482,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2372336869993887,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6648881310011348,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3995429779988626,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.8348494399997435,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8972919259995251,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.716619972999979,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.5212326379987644,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7577359480001178,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7680492179988505,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9276409410013002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9690533569992112,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.410442903999865,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8646437199986394,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9646813069994096,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.859078105999288,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.166410571000597,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.042396693999763,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.025396824001291,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5415829789999407,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5128926349989342,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.8748094309994485,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4035722219996387,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.636715374999767,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.469663818999834,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.887191363000966,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.380247742001302,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.851551946001564,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.198874526999134,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8596373199998197,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8741893250007706,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 13.647814198999185,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2768703310011915,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.35614237000118,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.472020003999205,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.461138682998353,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 24.49435975399865,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0170397450001474,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9421453840004688,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.09518134100108,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8843295999995462,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4740153250004369,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.094389930000034,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5988337630005844,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.128540321000401,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9317401900007098,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.661986516999605,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.913385820998883,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1180551500001457,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.640308486001231,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.6658242880002945,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9624350720005168,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5259560699996655,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1530938759988203,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.6950649629998225,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.3798634960003255,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.121968994999406,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3924604519997956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.803868134000368,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8100035250008659,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7328073460012092,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4634159919987724,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1139831109994702,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1006688029992802,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5118272919989977,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.14533577200018,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.988628281000274,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.043148349999683,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.204577156000596,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3411999830004788,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8770783109994227,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5815355220001948,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.78630795600111,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.090739396000572,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8704560339992895,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.063146279000648,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5156439259990293,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7449256090003473,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7533201910009666,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.752617386000566,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.359265802000664,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6724749989989505,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8586879180002143,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7186873519985966,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.80514238700016,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.326666267001201,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7022813120001956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3221297790005337,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.6256618999996135,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.028101104000598,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3395245459996659,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.946498851000797,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8615989669997361,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.182222177998483,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7906669429994508,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2423470279991307,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9935854340001242,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6655273079995823,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.921943335999458,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.695585755000138,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.525244491000194,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.844015902001047,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8680599069994059,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8134031039990077,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0488824260010006,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.308359108001241,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9565348839987564,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6945020500006649,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1507676860001084,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8398982170001545,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.851419346001421,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 14.509631666998757,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3740936710000824,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4594288130010682,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9109433009998611,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.524979861000247,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6644918999991205,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8800049880010192,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.394652335000501,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5707190399989486,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9217539210003451,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4287384800009022,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2258651690008264,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.756411198000933,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.561812674000976,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.6684065190002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.869202314999711,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.563434293000682,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3786115029997745,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0284956570012582,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8176469989994075,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.345456820999971,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9231034900003579,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.240844948000813,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.999672659998396,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3229781159989216,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1948082059989247,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.098526904999744,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.614451155999632,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0607314280005085,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.421081114000117,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.12098345099912,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.560866009000165,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 26.679617468000288,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.734248984999795,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.889895410000463,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8918392550003773,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8112825830012298,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.570640369998728,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8497926950003603,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8124700909993408,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.71759483400092,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.767019999000695,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.700827697999557,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7753842239999358,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.4762336450003204,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5769849329990393,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.031177498998659,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1206087169994134,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.4919097460006014,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8129504900007305,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.295889934001025,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.644281585000499,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4596889229997032,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8389524510002957,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1002113040012773,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.110288252000828,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.565266038000118,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.21082468700115,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4124962149999192,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.363363857000877,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.801974885998789,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.834582715999204,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.538784742999269,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.940787558998636,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.840978467000241,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.583756142999846,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.544722541999363,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.745105564999903,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.842750646999775,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6394699230004335,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4982624780004699,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6884784940011741,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2607516110001598,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.962068155000452,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6012407749985869,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.60363478599902,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4769643340005132,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0478381909997552,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 41.84872594599983,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.231011612000657,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6605166570006986,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3879448669995327,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0759193520007102,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.288651695000226,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9081448430006276,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1693549909996364,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0611254979994555,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1641731439995056,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.338046036000378,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3954295280000224,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.742244655000832,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2955597920008586,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.108172468999328,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7800880369995866,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.588208249000672,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.908215774999917,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.543649737999658,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.072103517000869,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8797917880001478,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.42006260999915,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.027230706999035,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5605038449994026,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5896015180005634,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.121285338000234,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.991362869999648,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.046000792999621,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.776137992999793,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.504668891999245,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.941881304001072,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.415034198000285,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8721865719999187,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.2402354959995137,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.643849866999517,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7055936360011401,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7811983739993593,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8027762669989897,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.1023591789999045,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.33346352099943,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.734337658001095,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.03396202499971,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.336129814999367,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.03705341100067,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.172705496999697,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.672891623000396,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.18051557200124,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1178585329998896,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8981861819993355,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9096453550009755,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2265286470010324,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.933762210999703,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6552602779993322,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0095630369996798,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.251836363999246,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3799022969997168,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.482092948999707,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 14.692385566000667,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 21.53814953500114,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.7780725180000445,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 16.485651212000448,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.585801835000893,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.718986837000557,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5299281120005617,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0638839509992977,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.781965723999747,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.052009224998983,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.68262077899999,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3969101660004526,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.838121108999985,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4691825849986344,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6985665560005145,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6191700979998132,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.539377081999191,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.54909759200018,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8982936419997714,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.033628711000347,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.768365346000792,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0697026129982987,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6616707150005823,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2276668190006603,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7001043099990056,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.147103160001279,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.296281363000162,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.725897159998567,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2404803890003677,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.641185075000976,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1514406019996386,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.362518418000036,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.303874949999226,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.234104936998847,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.252084318000925,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.416979616999015,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.58764619700014,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2405942879995564,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.68155278499944,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 12.075896964999629,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0854506800005765,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.078816519000611,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.394636240998807,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.87360131800051,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 12.94508313299957,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.111055472998487,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.775724301000082,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5213556770013383,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1326719419994333,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5989460619985039,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6210181349997583,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3541864319995511,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.365783768998881,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.415581845001725,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.845594655000241,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2943738529993425,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2077276990003156,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7370123430009698,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0500299890009046,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5811167899992142,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2353655780007102,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.5656826729991735,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2804641500006255,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7844159820015193,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9905513249996147,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.956281671999022,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.557229342000937,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0822693089994573,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.266751392000515,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9115515560006315,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1987011519995576,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.416680866999741,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5175872739982879,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.557989510998596,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5754642330011848,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.574730655998792,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.102633172999049,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9181023180008197,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5021659249996446,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2309894820009504,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.302570058998754,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7032592039995507,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.94387857699985,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.342352829000447,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5414356560013402,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.892293798000537,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4712365430004866,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.701650557999528,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1046824340010062,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9412451420012076,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0408640969999396,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4534276420017704,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1978183379997063,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.808714194999993,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.358628824000334,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7687132289993315,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4650493080007436,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0770409399992786,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.5073805350002658,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3467436419996375,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4396761209991382,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0621286450004845,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4219860859993787,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2378565229992091,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 64.59954259000006,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0465548889987986,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.083960501000547,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.484423945999879,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.3152576930006035,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.017003434000799,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.417121372998736,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.817195171999629,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.427168521999192,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.827260066000235,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.632010025001364,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.118476794999879,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 65.93777488600062,
+      "status": "http_error",
+      "error": "HTTP 500"
+    },
+    {
+      "latency_seconds": 3.615642179000133,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1036989910007833,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5037747739988845,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8790184589997807,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4080168799991952,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.548675161999199,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5264224490001652,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6542819480000617,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0643188979993283,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.952180453001347,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2178730910000013,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8179188360008993,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5839716800001042,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8240277990007598,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8789171779990284,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6341334380012995,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6184320379998098,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.019128814001306,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.5505034050002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.525079639999603,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.682547798000087,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0182420539986197,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.029555536999396,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1662260239991156,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8568407700004173,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.185345027999574,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.3265492690006795,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.9668227870006376,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.2644661930007715,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8861820909987728,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2889062859994738,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.161284137000621,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.495253904000492,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3410296790007123,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7600229019990365,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.577862879999884,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.232402969000759,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3480295080007636,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8373656629992183,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.4263028879995545,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8699576480012183,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.478420475999883,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.292810315000679,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.396187282000028,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.566144889999123,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.668117367000377,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5980817090003256,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.841372312999738,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8993928439995216,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3118152229999396,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5363000329998613,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.062247165000372,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9732448550003028,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.8811207990002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.304613718999462,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.818582296000386,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9914196570007334,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.595108268000331,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7404783820002194,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8947366849988612,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4587058540000726,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6930887379985506,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.503863194000587,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.207283091000136,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.065867460998561,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3386496620005346,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.656834317000175,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.073592038001152,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3628875369995512,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.149699993999093,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.905325490000905,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.626625307999348,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.3684713110014854,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1710756650008989,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.970356792999155,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1320167489993764,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9372435610002867,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0983480529994267,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8964697169994906,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.738857830001507,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6031123060001846,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9348741909998353,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8800993739987462,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1083516599992436,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.504682717999458,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.883817314001135,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.529630381999596,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.483688271000574,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3880346790010663,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.287643993000529,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.038797572000476,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1415068590013107,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.357052089999343,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.784730239000055,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.497018700998524,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9098239359991567,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.8215366280001035,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.163054970998928,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.668911131000641,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0820023650012445,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0028429720005079,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.71542031899844,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5467452390003018,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2128586519993405,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.036192094999933,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1030824789995677,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8105551879998529,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.336641591000443,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2993205729999318,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.707194773000083,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3149404329997196,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0013194439998188,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0570581520005362,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2603543770001124,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9868158330009464,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.448154962001354,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3019989730000816,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6047762220005097,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9684847590015124,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2739834210005938,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.3881256450004,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2117501809989335,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1964235010000266,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.810161904999404,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3108007199989515,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4561851189992012,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4453389440004685,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1929124279995449,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.898118799999793,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6580123389994696,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0810120309997728,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.484450417001426,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9175584740005434,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2588271509994229,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.412023457000032,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7505521989987756,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4611765819990978,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3806640429993422,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.4937292680006067,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8752539990000514,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.142511664000267,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9200131750003493,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8201293599995552,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6020948189998307,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6875556710001547,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9621089970005414,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.873053280000022,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6471373149997817,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0990070440002455,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.46392364500025,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2764769329987757,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0880997460008075,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7006730980010616,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7643744770011835,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.000036176001231,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5205074250006874,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7244201699995756,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6861595059999672,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0499143580000236,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5945759559999715,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4348049000000174,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.067405277999569,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.06712284599962,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5468747609993443,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9980637740009115,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.206291376000081,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1102851430005103,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7493920730012178,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.46276959700117,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.373581080000804,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1852575169996271,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.371005659999355,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9817614839994349,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1769804560008197,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.548576115999822,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4865936790010892,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.965978002999691,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2738952090003295,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.675113257000703,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.88218852099999,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6001910699997097,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.58628226700057,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.61137433300064,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.05190917100117,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.257206087000668,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8731296330006444,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9311772469991411,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1468558760007,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.675185169999168,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.9139459439993516,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1231825050017505,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1223865949996252,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.912108603999513,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7163583759993344,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.231391149998672,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.838869408000392,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.26220581599955,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.365647352000451,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.580833382000492,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.125245654999162,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8366874780003855,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.060619658001087,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4850495740010956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3091235579995555,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5133814440014248,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7708555949993752,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4262188329994387,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.055412347999663,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.930847857000117,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4383828949994495,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.972819386999618,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.922560386999976,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4881394949989044,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.936286131000088,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.129360230999737,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.35689583400017,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3721526680001261,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6411507480006549,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.443226441999286,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.001695823999398,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.23151242199856,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3587822469999082,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0447217849996377,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 12.058960303000276,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.181939189000332,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.015820580001673,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7369435780001368,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2373706260004838,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.1251387180000165,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3448506530003215,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8946750779996364,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0249306129990146,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3722233999997115,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.199989404000007,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7172733980005432,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.9636497529991175,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.011055762999604,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 12.079391655999643,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.813142372000584,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.127151632001187,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5700777189995279,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.370865055001559,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1858257249987219,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.931463081999027,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9602909299992461,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9935402359988075,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7731135499998345,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2056585280006402,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.863866921999943,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.797469398999965,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3484534790004545,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9924953049994656,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6429419710002549,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.40436918100022,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.61595433399998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0340501890004816,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.284505519000959,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.079503637000016,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8794638340004894,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.902508711998962,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.023965774000317,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2956021969985159,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.65205973799857,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6931026830006886,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.407891455000936,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.237632594000388,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 22.16126787399844,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.364208865999899,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4127234710013,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2837719830004062,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.028879075998702,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1306366580010945,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4218870879994938,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0636932109991903,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1612150060009299,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6770048119997227,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.208054626999001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.08487344400055,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3587210189998586,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2721015130009619,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0712688010007696,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.657926660998783,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0146927899986622,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.539391461999912,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.642125111000496,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.2730855030004022,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8711052389990073,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.493089219000467,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.995624991999648,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8102860469989537,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.357007013999464,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5547857399997156,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.595925937001084,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4724176489999081,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.641393572999732,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3675029639998684,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5581795390007755,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.172138886000539,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9928206160002446,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5117034720005904,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3220787640002527,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.632264898998983,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5598115749999124,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5232781779996003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.723044644999391,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7287148400009755,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0465050410002732,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.759296489999542,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 25.7691733190004,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4743275010005163,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.354493820001153,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8558686429987574,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5558011989996885,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.637003062000076,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8048971270000038,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.92091928300033,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2946405570000934,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2420665610006836,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1180640519996814,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8781018839999888,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.885654417999831,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1888234600010037,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.1723819990002085,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.078119706000507,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3920728140001302,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4916745009995793,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.2358719330004533,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.636895204999746,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0069279370000004,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.246123044000342,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3623473399984505,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8151742459995148,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.639780547000555,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1935094990003563,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3136815479992947,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0034955049995915,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5499373940001533,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3141196300002775,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.119532459000766,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9292248889996699,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3926912549995905,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8033066680000047,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.035650316998726,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4086968679985148,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1578980300000694,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.645509850999588,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4184530899983656,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9410687279996637,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5107040990005771,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7081276220014843,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.117068580000705,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0480585649984278,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.954000399000506,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.446814691000327,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4791294709993963,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9008962400002929,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.302049584000997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3375656569987768,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.665980531999594,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.468250645999433,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3939529489998677,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3131161919991428,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.528372746000969,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.001892260999739,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1008173649988748,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.359873190000144,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.2693930710011045,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.790971815999001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5022479920007754,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5018636160002643,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2332523160002893,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.046173101000022,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.658771614000216,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.502744346000327,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.872898047999115,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.031711953000922,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.732605794000847,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.557688341001267,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3051988999995956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.328167994000978,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7578256169999804,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8709120389994496,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4525466739996773,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4314034700000775,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9834582490002504,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5055314090004686,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4120327750006254,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7980993180008227,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8474724610005069,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0743410240011144,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.741204142999777,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9679753109994635,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6656985400004487,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3072367280001345,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.466142429999309,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9878164030014887,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.903239758001291,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9452624179994018,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6375132749999466,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.531570193999869,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.514593462999983,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.751674233000813,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6625874459987244,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.967310410000209,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.782440045999465,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.8155508790005115,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2042660499992053,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.341149255998971,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1522132440004498,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4730908559995441,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.995963613999265,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9031080590011697,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0121298690010008,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4162533480011916,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.068097821000265,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.190337897000063,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.179624739999781,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0521885580001253,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8451948009987973,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.4580883590006124,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.49280306699984,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.283088326999859,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.712394567000956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3267090109984565,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5535646719999932,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3982653969997045,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9249972149991663,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3187601919998997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.391330210999513,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.004726817000119,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9435888059997524,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7565348030002497,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3614942889998929,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.081244171000435,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.976827263000814,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5438665360015875,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.847825257000295,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6603135870009282,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.097108901998581,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.527933880999626,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1287831160007045,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.161763656000403,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.866478972999175,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.494811856999149,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6216867359999014,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.730254096000863,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 16.31825009900058,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.719014191001406,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.811130456000683,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8133674319997226,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.911822336998739,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8983714030000556,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.012730962000205,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.711575305000224,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8709021609993215,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5068653210000775,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8085376950002683,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.179723107999962,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.2077193280001666,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.7740313700014667,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3884793369998079,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9415091240007314,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.177107112000158,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3812051120003161,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.795630512999196,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.911574383999323,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.381471935001173,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7348070019997976,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.736422345000392,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1479263520013774,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1966266269992047,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.09667854700092,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 15.347646201000316,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.2833628859989403,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.445356095000534,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1994936270002654,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3044114940003055,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7680089069999667,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6629924720000417,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0616900340010034,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3643189649992564,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2729114800004027,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.000150030999066,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5079923779994715,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.3739137219999975,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.297021823998875,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1804888759997993,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6223716920012521,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0382550160011306,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8521328210008505,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6362038940005732,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.054239947001406,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.818283777000033,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.918222953001532,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 12.318784205001066,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.619057706999229,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.819164656999419,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.723236491001444,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9662842310008273,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6860109280005418,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.9104633930001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2716119279994018,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.752610695999465,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1341977339998266,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 12.42796063700007,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.946628833999057,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.8132928670002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.5358825549992616,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8899196040001698,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.948889445999157,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.4750696339997376,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.118205549000777,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7229761790003977,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4281324299990956,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1268880890002038,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3427832480010693,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.869212883999353,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3675096759998269,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.484466400001111,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2140778039993165,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6748210229998222,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.1228668530002324,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.8753593509991333,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.478407050999522,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.6297210220000125,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.418800323999676,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0825658829999156,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.62167363700064,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.568033157000173,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3357127550007135,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.118106694000744,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.885942220000288,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.139405373000045,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.9715528979995725,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.147650345999864,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9657986509992043,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5661329009999463,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.110539332999906,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.745926091000001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 14.911807632999626,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7676625889998832,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.677391068000361,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0958419820017298,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.725981092000438,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4447280829990632,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.837623571000222,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.065096194999569,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1651462440004252,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8786856110000372,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7014146040000924,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2215717420003784,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5336955099992338,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.5720532840005035,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0259693269999843,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3994935460013949,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9664066020013706,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.088591767998878,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0760425410007883,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6898368219990516,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.216279485000996,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.028196866000144,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.880537621998883,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.490597607000382,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3315995190005196,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.913421526000093,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.413767430000007,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.12607806000051,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2184731860015745,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.465312034999442,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3180744950004737,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2048251350006467,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.215332154000862,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6116435120002279,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6264509110005747,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.552848544999506,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9559562590002315,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2675982149994525,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.820908646001044,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0890586219993565,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.3176428839997243,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.8223090400006186,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.6884492180015513,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.9824200380007824,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9534721850013739,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3565590710004471,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 19.23765400800039,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.139227776999178,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 118.89664742100103,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4072285819984245,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 14.135844682001334,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 10.736807405000945,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.540761117999864,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 20.240935388999787,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.006641672000114,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5841606210015016,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.718447479999668,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.974197543999253,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 49.33878093800013,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.208419210999637,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9785354039995582,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1384884210001474,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.325649892000001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.409288893999474,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.309861818001082,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3477050629990117,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.076956644001257,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1372700020001503,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.76848824300032,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.118933392001054,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 15.983559030000833,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.833663326000533,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.251024553001116,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.851705695000419,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.49795991299834,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9305758709997463,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.645553082000333,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 15.95058832200084,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.806999657001143,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.165064421000352,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1624105410010088,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.219229255000755,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.951459764999527,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.968285783999818,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.119005909000407,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.088963762998901,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0888671209995664,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4191718580004817,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.0389660880009615,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6341297140006645,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.035821044999466,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.7502428030002193,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0702528149995487,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.143651061000128,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 34.86915649299954,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.907362660000217,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4168284609986586,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 13.126343223000731,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7076833360006276,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.36788340000021,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.905904248000297,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2045181700013927,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.704786102000071,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.521241200000077,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.325805172999026,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 13.428829804999623,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.0297197939999023,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 13.365812995998567,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.667707820999567,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.430287879000389,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4587738119989808,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.392162862999612,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.393625238000823,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.2124531619992922,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6453238949998195,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.180659191999439,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.011238213000979,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.011224743000639,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.515805958000783,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.9355679399996006,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 0.7782502379996004,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.301564708001024,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.527563386000111,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9331485929997143,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4693561709991627,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.011801499000285,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.795419187999869,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.417349478999313,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.466429072999745,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.280134603999613,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.0101684300007037,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.0910395909995714,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.9888176719996409,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.6484424370009947,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 9.439221890001136,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.066330989000562,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.9780928250002034,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.105229627000881,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.1972694369997043,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.463547827999719,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5680367989989463,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.290178793999075,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.689563489000648,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1148954660002346,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.274702692999199,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3031063840007846,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.259720868998556,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.1269046560009883,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.7633736879997741,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.813425174999793,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5220723200000066,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.729898849000165,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.518255684999531,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5664322429984168,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3665780360006465,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.4754467310012842,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.628377831000762,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5146999810003763,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.729107223000028,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 14.22916753699974,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.3835688079998363,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.724022819998936,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5681369339999947,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.594932668998808,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.61041407599987,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 11.382513878999816,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.509836721999818,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8214488289995643,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.921670303998326,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.064501746001042,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.854904212999827,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.6666387719997147,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 1.5004635339992092,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.713089643000785,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.3832522989996505,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.692397392000203,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.740182006000396,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.9608745310015365,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 2.530699306000315,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.345710329000212,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.016492370999913,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 5.645300703999965,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 7.8085127729991655,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.5959532529996068,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 3.8725492499997927,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 4.3621448970006895,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 12.603746381000747,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 8.015260984999259,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "latency_seconds": 6.355717319998803,
+      "status": "ok",
+      "error": null
+    }
+  ]
+}
