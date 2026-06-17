@@ -16,6 +16,7 @@ conditional router following the same shape.
 """
 from __future__ import annotations
 
+import asyncio
 import json as _json
 import os
 import re
@@ -34,6 +35,17 @@ from agent.schema import render_schema
 # (the 3rd attempt added zero accuracy), so capping at 2 removes up to 2 serial
 # LLM calls from the worst case (revise+verify) with no measured quality loss.
 MAX_ITERATIONS = 2
+
+# Verifier mode (Phase 6). The Phase-5 eval showed the LLM plausibility check
+# converted ZERO net questions (per-iteration pass rate iter1 == iter2), because
+# the failures that survive execution are plausible-but-wrong rows the verifier
+# can't catch without the gold answer. Meanwhile that check costs one extra
+# serial LLM call on EVERY request — the dominant agent-side latency under load.
+# So the default verifier is PROGRAMMATIC: it revises only on the failure modes a
+# rule can detect for free (execution error / zero rows), which is where the
+# loop's value actually came from. Set VERIFY_LLM=1 to restore the LLM verifier
+# (used for the Phase 3 loop demo and the Phase 4 Langfuse waterfall).
+VERIFY_LLM = os.environ.get("VERIFY_LLM", "0") == "1"
 
 VLLM_BASE_URL = os.environ.get("VLLM_BASE_URL", "http://localhost:8000/v1")
 VLLM_MODEL = os.environ.get("VLLM_MODEL", "Qwen/Qwen3-30B-A3B-Instruct-2507")
@@ -77,9 +89,18 @@ def llm() -> ChatOpenAI:
 
 # ---- Nodes ------------------------------------------------------------
 
-def _attach_schema(state: AgentState) -> dict:
-    """Provided. Render the DB schema once at the start of the run."""
-    return {"schema": render_schema(state.db_id)}
+async def _attach_schema(state: AgentState) -> dict:
+    """Render the DB schema once at the start of the run.
+
+    Async (Phase 6 SLO): the whole graph runs on the event loop so a single
+    uvicorn worker can keep many requests in flight concurrently (the LLM calls
+    are I/O-bound on vLLM). The 8-sync-worker build capped concurrency at 8,
+    which is below the ~20 in-flight needed for 10 RPS at ~2s latency (Little's
+    law) — that was the structural ceiling. render_schema/execute_sql are sqlite
+    (blocking) so we push them to a threadpool to avoid stalling the loop.
+    """
+    schema = await asyncio.to_thread(render_schema, state.db_id)
+    return {"schema": schema}
 
 
 def _extract_sql(text: str) -> str:
@@ -92,7 +113,7 @@ def _extract_sql(text: str) -> str:
     return (fenced.group(1) if fenced else text).strip()
 
 
-def generate_sql_node(state: AgentState) -> dict:
+async def generate_sql_node(state: AgentState) -> dict:
     """Worked example - the other LLM nodes follow this same shape.
 
     Build messages from the prompts, call the shared llm(), extract the SQL,
@@ -102,7 +123,7 @@ def generate_sql_node(state: AgentState) -> dict:
     This node is wired and ready; fill in GENERATE_SQL_SYSTEM / GENERATE_SQL_USER
     in prompts.py to make it produce real queries.
     """
-    response = llm().invoke([
+    response = await llm().ainvoke([
         ("system", prompts.GENERATE_SQL_SYSTEM),
         ("user", prompts.GENERATE_SQL_USER.format(
             schema=state.schema,
@@ -117,9 +138,10 @@ def generate_sql_node(state: AgentState) -> dict:
     }
 
 
-def execute_node(state: AgentState) -> dict:
-    """Provided. Runs the SQL and stores the result."""
-    return {"execution": execute_sql(state.db_id, state.sql)}
+async def execute_node(state: AgentState) -> dict:
+    """Runs the SQL and stores the result. sqlite is blocking → threadpool."""
+    execution = await asyncio.to_thread(execute_sql, state.db_id, state.sql)
+    return {"execution": execution}
 
 
 def _parse_verify_response(text: str) -> tuple[bool, str]:
@@ -143,7 +165,7 @@ def _parse_verify_response(text: str) -> tuple[bool, str]:
         return False, f"unparseable verifier response: {text[:120]}"
 
 
-def verify_node(state: AgentState) -> dict:
+async def verify_node(state: AgentState) -> dict:
     """Decide whether state.execution plausibly answers state.question.
 
     Follow the generate_sql_node pattern: build messages from the VERIFY_*
@@ -155,9 +177,25 @@ def verify_node(state: AgentState) -> dict:
     Return: {"verify_ok": <bool>, "verify_issue": <str>}.
     What counts as "not plausible" is yours to define - see the Phase 3 targets
     in the README.
+
+    Default path is a PROGRAMMATIC gate (no LLM call) - see VERIFY_LLM above for
+    why. It flags exactly the failures a revise can act on: execution errors and
+    empty results. Set VERIFY_LLM=1 to use the LLM plausibility check instead.
     """
-    execution_text = state.execution.render() if state.execution else "No execution result."
-    response = llm().invoke([
+    ex = state.execution
+    if ex is None:
+        return {"verify_ok": False, "verify_issue": "no execution result"}
+    if not ex.ok:
+        return {"verify_ok": False, "verify_issue": f"execution error: {ex.error}"}
+    if ex.row_count == 0:
+        return {"verify_ok": False,
+                "verify_issue": "query returned zero rows; the table, filter, or join is likely wrong"}
+    if not VERIFY_LLM:
+        # Clean result with rows -> accept without an LLM round-trip.
+        return {"verify_ok": True, "verify_issue": ""}
+
+    execution_text = ex.render()
+    response = await llm().ainvoke([
         ("system", prompts.VERIFY_SYSTEM),
         ("user", prompts.VERIFY_USER.format(
             question=state.question,
@@ -169,7 +207,7 @@ def verify_node(state: AgentState) -> dict:
     return {"verify_ok": ok, "verify_issue": issue}
 
 
-def revise_node(state: AgentState) -> dict:
+async def revise_node(state: AgentState) -> dict:
     """Produce a revised SQL query given state.verify_issue and the prior attempt.
 
     Same shape as generate_sql_node, but the prompt should include the failing
@@ -180,7 +218,7 @@ def revise_node(state: AgentState) -> dict:
     Return: {"sql": <str>, "iteration": state.iteration + 1, ...}.
     """
     execution_text = state.execution.render() if state.execution else "No execution result."
-    response = llm().invoke([
+    response = await llm().ainvoke([
         ("system", prompts.REVISE_SYSTEM),
         ("user", prompts.REVISE_USER.format(
             schema=state.schema,

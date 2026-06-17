@@ -77,7 +77,7 @@ def _build_response(final: dict[str, Any]) -> AnswerResponse:
 
 
 @app.post("/answer", response_model=AnswerResponse)
-def answer(req: AnswerRequest) -> AnswerResponse:
+async def answer(req: AnswerRequest) -> AnswerResponse:
     state = AgentState(question=req.question, db_id=req.db)
     # `langfuse_tags` is read by the callback handler and applied to the trace;
     # other metadata keys propagate as trace metadata. db_id is known up front.
@@ -95,7 +95,7 @@ def answer(req: AnswerRequest) -> AnswerResponse:
     )
     try:
         with span_ctx as root:
-            final = graph.invoke(state, config=config)
+            final = await graph.ainvoke(state, config=config)
             resp = _build_response(final)
             if _lf_client is not None and root is not None:
                 _enrich_trace(root, req, final, resp)

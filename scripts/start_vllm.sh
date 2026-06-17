@@ -26,7 +26,7 @@ exec uv run python -m vllm.entrypoints.openai.api_server \
     --port 8000 \
     --quantization fp8 \
     --gpu-memory-utilization 0.90 \
-    --max-model-len 4096 \
+    --max-model-len 8192 \
     --max-num-seqs 64 \
     --enable-chunked-prefill \
     --enable-prefix-caching \
@@ -37,8 +37,12 @@ exec uv run python -m vllm.entrypoints.openai.api_server \
 #                              FP8 tensor cores, cutting decode memory bandwidth.
 #   --gpu-memory-utilization   0.90: give weights+KV most of the 80GB; keep 10% for
 #                              activations, CUDA graphs, and allocator fragmentation.
-#   --max-model-len 4096       Prompts <=3K + short SQL outputs fit comfortably. Half
-#                              of 8192 -> ~2x more sequences fit in KV cache -> higher RPS.
+#   --max-model-len 8192       Schema context now carries per-column example values
+#                              (a large text-to-SQL accuracy lever), which pushes the
+#                              widest schema (card_games) to ~4.4K tokens. 4096 truncated
+#                              it (400 errors); 8192 fits every prompt with headroom. KV
+#                              still holds ~55x concurrency at 8192 -- far above the 64
+#                              max-num-seqs and the ~10 RPS workload, so no RPS loss.
 #   --max-num-seqs 64          Enough in-flight slots for 10 RPS x 2-3 serial calls with
 #                              headroom; high enough to keep the GPU busy, not so high it
 #                              thrashes the KV cache.

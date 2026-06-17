@@ -24,6 +24,39 @@ def _q(ident: str) -> str:
     return '"' + ident.replace('"', '""') + '"'
 
 
+# Number of distinct example values to show per column. Sample values are the
+# single biggest accuracy lever for BIRD-style text-to-SQL: they let the model
+# (a) pick the right column when several are plausible and (b) match string
+# literals *exactly* (e.g. "Australian Grand Prix" vs "Australian GP"), which is
+# the most common silent-wrong-answer cause on this benchmark.
+SAMPLE_VALUES_PER_COLUMN = 3
+# Cap each rendered value so a single wide TEXT/BLOB cell can't blow up the
+# prompt (and the prefix-cache budget). Values longer than this are truncated.
+MAX_SAMPLE_VALUE_LEN = 40
+
+
+def _sample_values(conn: sqlite3.Connection, table: str, col: str) -> str:
+    """Return a short ", "-joined preview of distinct non-null values, or "".
+
+    Best-effort: any error (odd type, huge BLOB, etc.) yields no hint rather
+    than failing schema rendering.
+    """
+    try:
+        rows = conn.execute(
+            f"SELECT DISTINCT {_q(col)} FROM {_q(table)} "
+            f"WHERE {_q(col)} IS NOT NULL LIMIT {SAMPLE_VALUES_PER_COLUMN}"
+        ).fetchall()
+    except sqlite3.Error:
+        return ""
+    vals: list[str] = []
+    for (v,) in rows:
+        s = str(v).replace("\n", " ").strip()
+        if len(s) > MAX_SAMPLE_VALUE_LEN:
+            s = s[:MAX_SAMPLE_VALUE_LEN] + "…"
+        vals.append(s)
+    return ", ".join(vals)
+
+
 @lru_cache(maxsize=32)
 def render_schema(db_id: str) -> str:
     path = db_path(db_id)
@@ -49,6 +82,9 @@ def render_schema(db_id: str) -> str:
                     line += " PRIMARY KEY"
                 if notnull and not pk:
                     line += " NOT NULL"
+                examples = _sample_values(conn, t, name)
+                if examples:
+                    line += f"  -- e.g. {examples}"
                 col_lines.append(line)
             for fk in conn.execute(f"PRAGMA foreign_key_list({_q(t)})"):
                 # (id, seq, ref_table, from, to, on_update, on_delete, match)
