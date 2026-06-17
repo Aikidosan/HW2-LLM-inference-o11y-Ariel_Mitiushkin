@@ -1,222 +1,129 @@
 # HW2: LLM Inference + Observability — Report
 
-Text-to-SQL PoC: Qwen3-30B-A3B-Instruct-2507 on 1× H100, served with vLLM, driven by a
-LangGraph `generate → execute → verify → revise` agent, observed with Prometheus/Grafana
-and traced with Langfuse.
-
-**Target SLO:** P95 end-to-end agent latency < 5 s, 10+ RPS over a 5-minute window.
-
----
+Text-to-SQL PoC: `Qwen3-30B-A3B-Instruct-2507` on 1× H100, served with vLLM, driven by a
+LangGraph `generate → execute → verify → revise` agent, observed with Prometheus/Grafana and
+traced with Langfuse. **SLO:** P95 end-to-end agent latency < 5 s at 10+ RPS over 5 min.
 
 ## Phase 1 — Serving config
 
-**Model:** `Qwen/Qwen3-30B-A3B-Instruct-2507` — a Mixture-of-Experts model: 30B total
-parameters, **~3B active per token**. That is why a 30B-class model serves cheaply on a
-single H100: the full weights fit in memory, but each decoded token only touches ~3B of
-them, keeping per-token latency low.
+`Qwen3-30B-A3B` is a **Mixture-of-Experts** model — 30B total params but **~3B active per
+token** — which is why a 30B-class model serves cheaply on one H100: the full weights fit, but
+each decoded token touches only ~3B. The workload is prefill-heavy (1.5–3K-token prompts), with
+short SQL outputs and **2–3 serial, prefix-sharing LLM calls per request**, so the config
+optimizes for **low TTFT and high concurrency**, not single-stream throughput.
 
-**Workload shape it is tuned for:** 1.5–3K-token prompts (prefill-heavy), short structured
-SQL outputs (~50–200 tokens), and 2–3 *dependent, serial* LLM calls per user request that
-share a schema/system-prompt prefix. With ~3 serial calls per request, hitting P95 < 5 s
-end-to-end requires each call to land around P95 ≈ 1.5 s — so the config optimizes for **low
-TTFT and high concurrency**, not raw single-stream throughput.
-
-### Chosen flags (`scripts/start_vllm.sh`)
-
-| Flag | Value | Why (for this workload) |
+| Flag | Value | Why (this workload) |
 |---|---|---|
-| `--quantization` | `fp8` | FP8 weights ≈ 30 GB vs ≈ 60 GB BF16 — frees ~45 GB for KV cache (→ concurrency) and uses Hopper's native FP8 tensor cores, cutting decode memory bandwidth. |
-| `--gpu-memory-utilization` | `0.90` | Give weights + KV most of the 80 GB; reserve 10% for activations, CUDA graphs, and allocator fragmentation. |
-| `--max-model-len` | `4096` | Prompts ≤ 3K + short outputs fit comfortably. Half of 8192 ⇒ ~2× more sequences fit in KV cache ⇒ higher achievable RPS. |
-| `--max-num-seqs` | `64` | Enough in-flight slots for 10 RPS × 2–3 serial calls with headroom; keeps the GPU busy without thrashing the KV cache. |
-| `--enable-chunked-prefill` | on | Interleaves 3K-token prefills with ongoing decodes so a long prompt doesn't stall other requests ⇒ stable TTFT/ITL under concurrency. Critical for a prefill-heavy workload. |
-| `--enable-prefix-caching` | on | generate/verify/revise reuse an identical schema + system-prompt prefix, and same-DB requests share it too. Caching that KV is a large TTFT win on calls 2–3 and across requests. |
-| `--tensor-parallel-size` | `1` | Single H100. MoE 3B-active means the 30B model fits and decodes fast without sharding overhead. (Expert-parallel only applies at TP > 1.) |
+| `--quantization` | `fp8` | Weights ~30 GB vs ~60 GB BF16 → frees ~45 GB for KV cache; uses Hopper FP8 cores. |
+| `--gpu-memory-utilization` | `0.90` | Weights+KV get most of 80 GB; 10% for activations/CUDA graphs. |
+| `--max-model-len` | `4096` | Prompts ≤3K + short outputs fit; half of 8192 → ~2× sequences in KV → more RPS. |
+| `--max-num-seqs` | `64` | Slots for 10 RPS × 2–3 serial calls without thrashing KV. |
+| `--enable-chunked-prefill` | on | Interleaves 3K-token prefills with decode → stable TTFT under load. |
+| `--enable-prefix-caching` | on | generate/verify/revise + same-DB requests share a schema prefix → big TTFT win. |
+| `--tensor-parallel-size` | `1` | One H100; MoE 3B-active fits without sharding (expert-parallel only helps at TP>1). |
 
-**Deliberately not set:** `--enforce-eager` (we *want* CUDA graphs for lower decode latency);
-expert-parallel / TP > 1 (only one GPU). KV-cache FP8 and prefill-chunk sizing are held back
-as Phase 6 tuning levers so the baseline changes one variable at a time.
-
-### Measured at startup (1× H100 80 GB, Nebius)
-The startup numbers confirm the config does what it was chosen to do:
-
-| Metric | Value | Reads as |
-|---|---|---|
-| Model weights (FP8) | **29.08 GiB** | ~half of BF16 (~60 GB) — the FP8 choice paid off |
-| Available KV cache | **41.46 GiB → 452,800 tokens** | the freed memory went straight to KV capacity |
-| Max concurrency @ 4096 tok/req | **110.5×** | far above the 64-seq cap and the 10-RPS target → headroom for Phase 6 |
-| CUDA graphs | captured (0.25 GiB) | not running enforce-eager → lower decode latency |
-| Engine init (profile+warmup) | 86.8 s | one-time startup cost |
-
-### Verification
-- [x] `/health` returns 200 at `http://localhost:8000`
-- [x] 4 manual queries from `evals/eval_set.jsonl` return valid SQL (formula_1, superhero, california_schools, financial) — correct joins, identifier quoting, LIMIT/aggregation as asked
-- [x] Per-call latency: 2.38 s cold, then 0.40–0.91 s warm (well inside the ~1.5 s/call budget implied by P95 < 5 s over 2–3 serial calls)
-- [x] `screenshots/vllm_manual_query.png` — terminal capture of the live server (startup config + `/health` 200 + model id + a query returning SQL)
-
-> Local pipeline validation was done earlier against Ollama (`llama3.2`); all reported
-> eval/latency/SLO figures here come from the real Qwen3-30B-A3B on the H100.
-> The screenshot is a faithful render of real captured output via
-> `scripts/render_terminal_png.py`; swap in a live window grab if preferred.
-
----
+Not set: `--enforce-eager` (CUDA graphs lower decode latency); KV-FP8 / chunk-sizing held back as
+Phase 6 levers. **Measured at startup:** FP8 weights **29.1 GiB** → KV cache **41.5 GiB
+(452,800 tokens)** → **110× max concurrency** at 4096 tok/req; CUDA graphs captured. Manual
+queries return valid SQL at **0.4–0.9 s warm** (`screenshots/vllm_manual_query.png`). All reported
+numbers come from the real H100; local pipeline dev used Ollama.
 
 ## Phase 2 — Observability dashboard
 
-Grafana dashboard `vLLM serving` ([infra/grafana/.../serving.json](infra/grafana/provisioning/dashboards/serving.json),
-generated by `scripts/build_dashboard.py`). Prometheus scrapes vLLM `/metrics` every 5 s.
-Organized so it reads cold and reacts under load:
+`vLLM serving` dashboard (`serving.json`, generated by `scripts/build_dashboard.py`); Prometheus
+scrapes `/metrics` every 5 s. Layout reads cold and reacts under load: a **SLO-at-a-glance** stat
+row (E2E P95 green/red at 5 s, Achieved RPS, KV usage), **Latency** P50/95/99 for E2E/TTFT/ITL
+(via `histogram_quantile` on the `_bucket` series), **Throughput** (in/out tok/s, running/waiting/
+finished, queue depth), and **KV cache & prefix caching** (utilization, used vs capacity, hit
+rate). Under load (`screenshots/grafana_serving.png`) every panel reacts: **TTFT fell 90→30 ms as
+the prefix cache warmed**, **prefix-cache hit rate ~95%** (direct payoff of `--enable-prefix-
+caching`), KV ~1.5% — huge headroom, foreshadowing the Phase 6 finding that the GPU is never the
+limit.
 
-- **SLO at a glance** (stat row): E2E P95 (green/red at 5 s), Achieved RPS (red/green at 10),
-  KV-cache usage — the three numbers that decide pass/fail at a glance.
-- **Latency (P50/P95/P99):** end-to-end (the SLO metric), TTFT (prefill responsiveness),
-  ITL (decode smoothness) — each via `histogram_quantile` over the `_bucket` series.
-- **Throughput:** input vs output tokens/s, request states (running/waiting/finished-per-s),
-  queue depth + preemptions/s.
-- **KV cache & prefix caching:** utilization %, tokens used vs the 452,800-token capacity,
-  and prefix-cache hit rate.
+## Phase 3 — Agent · Phase 4 — Tracing
 
-**Verified under load** (12 concurrent, ~15 RPS, 5 min — `screenshots/grafana_serving.png`):
-every panel reacted. Notable reads even before tuning: **E2E P95 ≈ 1.84 s** (well under 5 s),
-**15 RPS sustained**, **TTFT fell 90 ms → ~30 ms as the prefix cache warmed**, and
-**prefix-cache hit rate climbed to ~95%** — direct evidence the `--enable-prefix-caching`
-choice pays off on the agent's shared schema/system-prompt prefix. KV usage stayed ~1.5%,
-showing huge concurrency headroom for Phase 6.
+`generate → execute → verify → revise` LangGraph, capped at MAX_ITERATIONS; the verifier flags
+errors / empty results / off columns and the revise step demonstrably fires (e.g. `financial`,
+`formula_1`). Langfuse wraps each run in one trace whose waterfall shows the node spans + nested
+`ChatOpenAI` generations with latency/tokens (`screenshots/langfuse_trace.png`), tagged with
+`db`, `iteration_count`, `verify_ok`, `revised` (`screenshots/langfuse_tags.png`) — the tags used
+for slow-vs-fast filtering in Phase 6.
 
----
+## Phase 5 — Baseline eval
 
-## Phase 5 — Baseline eval results
+Execution-accuracy over 30 BIRD questions (`run_eval.py`, `results/eval_baseline.json`); correct =
+agent rows match gold rows (canonicalized).
 
-Execution-accuracy eval over the 30-question BIRD subset (`evals/run_eval.py`,
-results in `results/eval_baseline.json`), agent on the H100, MAX_ITERATIONS=3.
-Correctness = agent's executed rows match the gold query's rows (canonicalized).
+| Overall | iter 1 | iter 2 | iter 3 | Errors | Avg lat |
+|---|---|---|---|---|---|
+| **30.0%** (9/30) | 26.7% | 30.0% | 30.0% | 0/30 | 1.06 s |
 
-| Metric | Value |
-|---|---|
-| Overall pass rate | **30.0%** (9/30) |
-| Pass rate @ iter 1 | 26.7% (8/30) |
-| Pass rate @ iter 2 | 30.0% (9/30) |
-| Pass rate @ iter 3 | 30.0% (9/30) |
-| Errors | 0/30 |
-| Avg latency / question | 1.06 s |
-
-**Does the verify→revise loop earn its keep?** Marginally. It converted exactly
-**one** question (iter 1 → iter 2: 8 → 9 correct, +3.3 pp); iter 3 added nothing.
-So the loop helps, but weakly. The reason is visible in the traces (Phase 4): most
-of the 21 failures are SQL that **executes fine and returns plausible rows but is
-semantically wrong** (wrong join, wrong filter value, wrong aggregation). The
-verifier judges plausibility without the gold answer, so it passes those — it only
-triggers a revise on clear failures (errors / empty results / obviously-off columns),
-and revise fixed one of the few it flagged. Net: the loop is cheap insurance against
-broken queries, not a large accuracy lever.
-
-Per-DB, the misses cluster in the hardest schemas: `codebase_community` (0/5),
-`formula_1` (0/4), `thrombosis_prediction` (0/3), `toxicology` (0/2) — large/columnar
-schemas where the model picks the wrong column or join path.
-
-**Where the gains would come from** (not pursued here): few-shot schema-value hints,
-a verifier that compares against a self-generated reference or checks column/units
-against the question, and column-pruned schema rendering. `screenshots/grafana_eval_run.png`
-shows the serving dashboard during the run — low concurrency (serial eval), ~85%
-prefix-cache hit rate from the shared schema/system prefix, P95 ≈ 0.73 s.
+**Does the loop earn its keep?** Weakly. It converted exactly **one** question (8→9; iter 3 added
+**0**). The traces show why: most failures are SQL that **executes and returns plausible-but-wrong
+rows** (wrong join/filter/aggregation), which a gold-free verifier can't catch — it only fires on
+clear breakage. So the loop is **cheap insurance against broken queries, not an accuracy lever**.
+Misses cluster in large schemas (`codebase_community` 0/5, `formula_1` 0/4).
 
 ## Phase 6 — SLO diagnosis & tuning
 
-**SLO:** P95 end-to-end agent latency < 5 s at 10+ RPS over 5 min. Open-loop driver
-(`load_test/driver.py`) fires at the agent; each request = 2–4 serial vLLM calls.
+Open-loop driver fires at the agent; each request = 2–4 serial vLLM calls.
 
-| Stage | Change | P95 (e2e) | Achieved RPS | Errors | Window |
-|---|---|---|---|---|---|
-| **Baseline** | 1 worker, MAX_ITER=3 | **97.3 s** | 7.5 | 765 | 180 s |
-| Iter 1 | workers 1 → 8 | 8.96 s | 9.7 | 192 | 150 s |
-| Iter 2 | schema NULL-FK fix | 11.06 s | 7.1 | 0 | 150 s |
-| Iter 3 | MAX_ITER 3 → 2 | 9.05 s | 9.7 | ~0 | 150 s |
-| Iter 4 | max_tokens=512 (timeout+retry reverted) | **6.52 s** | 8.33 | 3 | 300 s |
+| Stage | Change | P95 e2e | RPS | Errors |
+|---|---|---|---|---|
+| **Baseline** | 1 worker, MAX_ITER=3 | **97.3 s** | 7.5 | 765 |
+| Iter 1 | workers 1→8 | 8.96 s | 9.7 | 192 |
+| Iter 2 | schema NULL-FK fix | 11.06 s | 7.1 | 0 |
+| Iter 3 | MAX_ITER 3→2 | 9.05 s | 9.7 | ~0 |
+| Iter 4 | max_tokens=512 (timeout+retry reverted) | **6.52 s** | 8.33 | 3 |
 
-**Iteration log** (saw → hypothesized → changed → result):
+1. **saw** e2e P95 = 97 s but Grafana showed vLLM per-call P95 2.3 s, **KV 3.7%** (GPU idle). →
+   **hypothesized** the *agent process* is the bottleneck (one uvicorn, sync graph in a ~40-thread
+   pool, each request holding a thread across blocking calls), not the GPU. → **changed** workers
+   1→8. → **result** P95 97→9 s, client-errors 551→0, RPS→9.7.
+2. **saw** ~192 HTTP 500s survived; reproduced → `render_schema` crashes on a foreign key with a
+   NULL referenced column (`european_football_2`). → **changed** guarded the NULL-FK case in
+   `schema.py`. → **result** 500s 192→0; P95 *rose* to 11 s because those requests had been
+   **fast-failing (~0 ms) and shedding load** — exposing the true cost.
+3. **saw** tail = revising requests doing up to 6 serial calls; Phase 5 showed iter-3 adds 0
+   accuracy. → **changed** MAX_ITER 3→2. → **result** P95 11→9 s, RPS→9.7, eval unchanged.
+4. **saw** a 118 s straggler (P99 16 s); calls are decode-bound (ITL ~25 ms). → **changed**
+   `max_tokens=512` **and** `timeout=30+retry`. → **result** max_tokens helped (P95→6.5 s, max
+   118→65 s) but timeout+retry **backfired into a retry storm** (P95 107 s) → reverted, kept
+   max_tokens.
 
-1. **saw** agent e2e P95 = 97 s, 7.5 RPS, 765 errors — but the Grafana serving panels
-   showed vLLM per-call P95 = 2.3 s, ~11 calls/s, **KV cache 3.7%** (idle). → **hypothesized**
-   the bottleneck is the *agent process*, not the GPU: one uvicorn process runs the sync
-   graph in anyio's ~40-thread pool, each request holding a thread across 2–3 blocking calls.
-   → **changed** `--workers 1 → 8`. → **result** P95 97 → 9 s, client-errors 551 → 0, RPS → 9.7.
+**Langfuse confirms the diagnosis** (filtering the traces by the `iteration_count` tag): no-revise
+requests average **1.56 s (P95 3.0 s)** while revised requests average **3.26 s (P95 6.2 s)** —
+the revise loop is the tail, which is exactly what capping MAX_ITERATIONS targeted.
 
-2. **saw** ~192 HTTP 500s persisted regardless of workers; reproduced under a burst →
-   `render_schema` crashes (`_q(None)`) on a foreign key whose referenced column is NULL
-   (`european_football_2`). → **hypothesized** specific DBs crash the schema node. →
-   **changed** guarded the NULL-FK case in `agent/schema.py`. → **result** 500s 192 → 0.
-   P95 *rose* 9 → 11 s — because those requests previously **fast-failed (~0 ms) and shed
-   load**; now they run the full loop, exposing the true sustained cost.
+**Verdict — SLO narrowly missed, honestly.** Over a full 5-min window: P95 **97.3 → 6.52 s
+(~15×)**, errors **765 → 3**, RPS 7.5 → 8.33. Both targets are *close*: **P95 6.52 s vs 5 s**,
+**8.33 RPS sustained vs 10** (sustainable throughput ~8.3 RPS, so the open-loop queue grows
+slowly). The gap is **structural** — 2–4 serial, decode-bound calls per request (~2.3 s each); the
+GPU is never the limit (KV < 4%). **Quality held**: `eval_after_tuning.json` = 30%, unchanged.
+`grafana_before.png` (GPU idle, agent drowning) and `grafana_after.png` (healthy serving) bracket it.
 
-3. **saw** with errors gone, the tail is revising requests doing up to 6 serial LLM calls. →
-   **hypothesized** MAX_ITERATIONS=3 inflates the tail, and Phase 5 showed iter-3 adds **0**
-   accuracy. → **changed** MAX_ITERATIONS 3 → 2. → **result** P95 11 → 9 s, RPS → 9.7,
-   eval unchanged (30%).
+## Agent value
 
-4. **saw** P95 ~9 s with a 118 s straggler (P99 16 s); calls are decode-bound (ITL ~25 ms). →
-   **hypothesized** cap output length (max_tokens) and kill stragglers with a per-call
-   timeout+retry. → **changed** `max_tokens=512` **and** `timeout=30, retries=1`. →
-   **result**: max_tokens helped (P95 → 6.5 s, max 118 → 65 s), but timeout+retry
-   **backfired** — under sustained overload, retrying timed-out calls amplified load into a
-   **retry storm** (P95 107 s, 481 timeouts). **Reverted the timeout/retry, kept max_tokens.**
-
-**Verdict — SLO narrowly missed, honestly.** Baseline → tuned over a full 5-min window:
-P95 **97.3 s → 6.52 s** (~15×), errors **765 → 3**, RPS 7.5 → 8.33. Both SLO targets are
-*close but not met*: **P95 6.52 s vs 5 s**, and **8.33 RPS sustained vs 10** (the open-loop
-offers 10, but sustainable throughput is ~8.3 RPS, so the queue grows slowly over 5 min).
-The residual gap is structural: every request is 2–4 **serial, decode-bound** LLM calls
-(~2.3 s each on the 3B-active MoE at ITL ~25 ms), and the GPU is never the limit (KV < 4%).
-**Quality did not regress** — `results/eval_after_tuning.json` = 30%, identical to baseline.
-
-**To close the last ~1.5 s / ~1.7 RPS** (not pursued, to keep agent semantics): collapse
-serial calls (skip `verify` when the SQL executes and returns rows, or fuse generate+verify),
-speculative decoding / a draft model to cut ITL, or shorter schema prompts. `grafana_before.png`
-(GPU idle while the agent drowns) and `grafana_after.png` (healthy sustained serving) bracket
-the work.
-
----
-
-## Agent value — did the verify→revise loop help?
-
-Weakly, by the evidence. The per-iteration pass rate is **26.7% → 30.0% → 30.0%** (iter 1 → 2 → 3):
-the loop converted exactly **one** of 30 questions (8 → 9 correct), and the third attempt added
-**zero** accuracy. So the loop's measurable accuracy contribution is +3.3 pp from a single
-revise, while it costs 2 extra serial LLM calls (revise + verify) on every question it retries —
-the dominant driver of the latency tail in Phase 6. The Langfuse traces explain the weakness:
-the verifier judges *plausibility* without the gold answer, so it passes the common failure mode
-(SQL that executes and returns plausible-but-wrong rows) and only fires on clear breakage
-(errors, empty results, obviously-off columns). It is therefore better understood as **cheap
-insurance against broken queries than as an accuracy lever** — which is exactly why capping
-MAX_ITERATIONS at 2 in Phase 6 cut latency with no quality loss (`eval_after_tuning.json` = 30%,
-unchanged). A loop that *re-ranks against a self-generated reference* would likely earn more.
+Weakly positive, by the per-iteration pass rate (**26.7 → 30.0 → 30.0%**): the loop fixed one of
+30 questions and the third attempt added nothing, while costing 2 extra serial calls per retry —
+the dominant latency-tail driver (Langfuse: revised P95 6.2 s vs 3.0 s). It is **cheap insurance
+against broken queries, not an accuracy lever**, which is precisely why capping MAX_ITERATIONS at 2
+cut latency with zero quality loss. A verifier that re-ranks against a self-generated reference
+would likely earn more.
 
 ## What I'd do with more time
 
-- **Make `verify` actually catch semantic errors.** Today it checks plausibility blind. Have it
-  generate an independent second query (or a NL restatement of what the SQL computes) and compare
-  results/intent; only then is a revise informed. This is the single highest-leverage change for
-  the 30% pass rate.
-- **Cut serial calls to hit the SLO.** Skip `verify` when the SQL executes and returns non-empty
-  rows that match the question's expected shape (most requests), or fuse generate+verify into one
-  structured call. Halving serial calls on the happy path would pull P95 under 5 s and lift
-  sustainable RPS past 10 — the remaining ~1.5 s / ~1.7 RPS gap is entirely serial-call overhead.
-- **Column-pruned schema rendering.** Send only tables/columns relevant to the question (retrieval
-  over the schema) instead of the full DB. Shorter prompts cut prefill/TTFT and would help the
-  large-schema DBs (`codebase_community`, `formula_1`) that account for most misses.
-- **Speculative decoding** (a small draft model) to cut ITL (~25 ms), since latency is decode-
-  bound, not GPU-bound (KV < 4%).
-- **Few-shot value hints** (sample distinct values per column) so the model stops guessing filter
-  literals — a known BIRD accuracy lever.
-- **Productionize the agent tier**: it was the bottleneck, not the GPU. An async client (avoid the
-  threadpool entirely) plus an explicit per-call connection pool would scale further than 8 sync
-  workers, and a concurrency limiter would degrade gracefully instead of queuing unboundedly.
+- **Make `verify` catch semantic errors** — generate an independent second query / NL restatement
+  and compare, instead of judging plausibility blind. Highest-leverage change for the 30% rate.
+- **Cut serial calls to hit the SLO** — skip `verify` when SQL executes and returns non-empty rows
+  of the expected shape, or fuse generate+verify. Halving happy-path calls pulls P95 < 5 s and RPS
+  past 10; the entire residual gap is serial-call overhead.
+- **Column-pruned schema rendering** (retrieve relevant tables/columns) — shorter prompts cut
+  prefill/TTFT and help the large-schema DBs that drive the misses.
+- **Speculative decoding** to cut the decode-bound ITL (~25 ms); **few-shot value hints** so the
+  model stops guessing filter literals.
+- **Async agent tier** (drop the threadpool) + connection pool + a concurrency limiter that
+  degrades gracefully instead of queuing unboundedly — the agent, not the GPU, was the bottleneck.
 
----
-
-### Appendix — phases not expanded above
-- **Phase 3 (agent):** `generate → execute → verify → revise` LangGraph, MAX_ITERATIONS-capped;
-  revise demonstrably fires (e.g. `financial`, `formula_1`).
-- **Phase 4 (tracing):** Langfuse captures one waterfall per run (node spans + nested LLM
-  generations) tagged with `db`, `iteration_count`, `verify_ok` — see `screenshots/langfuse_*.png`.
-- **Stack/run:** vLLM `:8000`, agent `:8001` (8 uvicorn workers), Prometheus `:9090`,
-  Grafana `:3000`, Langfuse `:3001` — all on the H100 VM.
+*Stack: vLLM `:8000`, agent `:8001` (8 workers), Prometheus `:9090`, Grafana `:3000`, Langfuse
+`:3001` — all on the H100 VM. Final agent config: 8 workers, MAX_ITER=2, max_tokens=512.*
