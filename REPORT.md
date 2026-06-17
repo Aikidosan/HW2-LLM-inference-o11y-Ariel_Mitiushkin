@@ -75,6 +75,19 @@ rows**, which a gold-free verifier can't catch. So the LLM verifier is pure late
 exactly the license Phase 6 uses to replace it with a free programmatic gate (note avg latency
 1.06 → 0.68 s from dropping one LLM call per question).
 
+**Why not higher than 40%? — and what I tried.** I added **self-consistency** (`SELF_CONSISTENCY_K`:
+sample K=5 candidates in parallel, execute each, keep the majority *executed result*). It moved the
+score **0** (still 40%, `results/eval_self_consistency.json`) — a useful negative result: the misses
+are **systematic, not stochastic** (the model is confidently wrong the same way every sample), so a
+vote over its own answers can't fix them. Root-causing the 18 failures: **~9 are evidence-dependent**
+— BIRD normally ships an *evidence* hint that this eval set omits (e.g. "normal IgG" = a specific
+`BETWEEN` range, "well-finished" = `ClosedDate IS NULL`, "carcinogenic" = `label='+'`, disqualified =
+`statusId=2`), which no prompt recovers; **~5 are projection ambiguities** (gold returns `id`, the
+agent returns `name`; gold orders `Street,City,State,Zip`, the agent swaps two columns); **~4 are
+hard string/date parsing**. The remaining gains are either re-introducing the evidence field or
+over-fitting gold's exact projection on a 30-row test — so 40% is the honest ceiling here, and
+self-consistency stays available but **off by default** (it costs K× generate latency for no gain).
+
 ## Phase 6 — SLO diagnosis & tuning
 
 Open-loop driver fires at the agent; each request = 2–4 serial vLLM calls.
