@@ -173,3 +173,50 @@ serial calls (skip `verify` when the SQL executes and returns rows, or fuse gene
 speculative decoding / a draft model to cut ITL, or shorter schema prompts. `grafana_before.png`
 (GPU idle while the agent drowns) and `grafana_after.png` (healthy sustained serving) bracket
 the work.
+
+---
+
+## Agent value — did the verify→revise loop help?
+
+Weakly, by the evidence. The per-iteration pass rate is **26.7% → 30.0% → 30.0%** (iter 1 → 2 → 3):
+the loop converted exactly **one** of 30 questions (8 → 9 correct), and the third attempt added
+**zero** accuracy. So the loop's measurable accuracy contribution is +3.3 pp from a single
+revise, while it costs 2 extra serial LLM calls (revise + verify) on every question it retries —
+the dominant driver of the latency tail in Phase 6. The Langfuse traces explain the weakness:
+the verifier judges *plausibility* without the gold answer, so it passes the common failure mode
+(SQL that executes and returns plausible-but-wrong rows) and only fires on clear breakage
+(errors, empty results, obviously-off columns). It is therefore better understood as **cheap
+insurance against broken queries than as an accuracy lever** — which is exactly why capping
+MAX_ITERATIONS at 2 in Phase 6 cut latency with no quality loss (`eval_after_tuning.json` = 30%,
+unchanged). A loop that *re-ranks against a self-generated reference* would likely earn more.
+
+## What I'd do with more time
+
+- **Make `verify` actually catch semantic errors.** Today it checks plausibility blind. Have it
+  generate an independent second query (or a NL restatement of what the SQL computes) and compare
+  results/intent; only then is a revise informed. This is the single highest-leverage change for
+  the 30% pass rate.
+- **Cut serial calls to hit the SLO.** Skip `verify` when the SQL executes and returns non-empty
+  rows that match the question's expected shape (most requests), or fuse generate+verify into one
+  structured call. Halving serial calls on the happy path would pull P95 under 5 s and lift
+  sustainable RPS past 10 — the remaining ~1.5 s / ~1.7 RPS gap is entirely serial-call overhead.
+- **Column-pruned schema rendering.** Send only tables/columns relevant to the question (retrieval
+  over the schema) instead of the full DB. Shorter prompts cut prefill/TTFT and would help the
+  large-schema DBs (`codebase_community`, `formula_1`) that account for most misses.
+- **Speculative decoding** (a small draft model) to cut ITL (~25 ms), since latency is decode-
+  bound, not GPU-bound (KV < 4%).
+- **Few-shot value hints** (sample distinct values per column) so the model stops guessing filter
+  literals — a known BIRD accuracy lever.
+- **Productionize the agent tier**: it was the bottleneck, not the GPU. An async client (avoid the
+  threadpool entirely) plus an explicit per-call connection pool would scale further than 8 sync
+  workers, and a concurrency limiter would degrade gracefully instead of queuing unboundedly.
+
+---
+
+### Appendix — phases not expanded above
+- **Phase 3 (agent):** `generate → execute → verify → revise` LangGraph, MAX_ITERATIONS-capped;
+  revise demonstrably fires (e.g. `financial`, `formula_1`).
+- **Phase 4 (tracing):** Langfuse captures one waterfall per run (node spans + nested LLM
+  generations) tagged with `db`, `iteration_count`, `verify_ok` — see `screenshots/langfuse_*.png`.
+- **Stack/run:** vLLM `:8000`, agent `:8001` (8 uvicorn workers), Prometheus `:9090`,
+  Grafana `:3000`, Langfuse `:3001` — all on the H100 VM.
